@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Forense (Enfriamiento de Newton)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Calculadora Forense</h1>
+      <p>Ley de enfriamiento de Newton (Integración)</p>
+    </header>
+
+    <section class="grid">
+      <div class="field">
+        <label>Ta (Temperatura ambiente, °C)</label>
+        <input id="Ta" type="number" step="0.01" value="20" />
+      </div>
+
+      <div class="field">
+        <label>T0 (Temperatura al morir, °C)</label>
+        <input id="T0" type="number" step="0.01" value="37" />
+      </div>
+
+      <div class="field">
+        <label>t1 (min)</label>
+        <input id="t1" type="number" step="0.01" value="0" />
+      </div>
+
+      <div class="field">
+        <label>T1 (°C)</label>
+        <input id="T1" type="number" step="0.01" value="32" />
+      </div>
+
+      <div class="field">
+        <label>t2 (min)</label>
+        <input id="t2" type="number" step="0.01" value="30" />
+      </div>
+
+      <div class="field">
+        <label>T2 (°C)</label>
+        <input id="T2" type="number" step="0.01" value="29" />
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="btnCalcular">Calcular</button>
+      <button id="btnLimpiar" class="secondary">Limpiar</button>
+    </div>
+
+    <section class="result" id="result">
+      <h2>Resultados</h2>
+      <div class="boxes">
+        <div class="box">
+          <div class="label">k</div>
+          <div class="value" id="kOut">—</div>
+          <div class="hint">1/min</div>
+        </div>
+        <div class="box">
+          <div class="label">Tiempo desde la muerte</div>
+          <div class="value" id="tMuerteOut">—</div>
+          <div class="hint">min</div>
+        </div>
+        <div class="box">
+          <div class="label">t0 (relativo a t1)</div>
+          <div class="value" id="t0Out">—</div>
+          <div class="hint">min</div>
+        </div>
+      </div>
+
+      <h2>Procedimiento</h2>
+      <pre class="pasos" id="pasosOut">—</pre>
+    </section>
+
+    <footer>
+      <small>Calculadora web</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
